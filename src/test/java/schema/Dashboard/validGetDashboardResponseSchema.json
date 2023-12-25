@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["success"]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "saleCount": {
+          "type": "integer"
+        },
+        "purchaseCount": {
+          "type": "integer"
+        },
+        "saleYesterdayCount": {
+          "type": "integer"
+        },
+        "purchaseYesterdayCount": {
+          "type": "integer"
+        },
+        "grownSale": {
+          "type": ["integer", "null"]
+        },
+        "grownPurchase": {
+          "type": ["integer", "null"]
+        },
+        "graphSale": {
+          "type": "array",
+          "items": {}
+        },
+        "graphPurchase": {
+          "type": "array",
+          "items": {}
+        },
+        "totalSales": {
+          "type": ["integer", "null"]
+        },
+        "totalPurchases": {
+          "type": ["integer", "null"]
+        }
+      },
+      "required": ["saleCount", "purchaseCount", "saleYesterdayCount", "purchaseYesterdayCount", "grownSale", "grownPurchase", "graphSale", "graphPurchase", "totalSales", "totalPurchases"]
+    }
+  },
+  "required": ["status", "data"]
+}

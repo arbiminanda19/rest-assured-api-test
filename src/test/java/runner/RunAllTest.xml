@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KasirAja API">
+    <test name="Regression Test">
+        <classes>
+            <class name="scenarios.Login" />
+            <class name="scenarios.Dashboard" />
+        </classes>
+    </test>
+</suite>
